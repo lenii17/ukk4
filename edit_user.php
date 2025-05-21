@@ -18,6 +18,42 @@ if (isset($_POST['update'])) {
 <head>
     <meta charset="UTF-8">
     <title>Edit User</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e7f3ff; /* Light blue background */
+            margin: 0;
+            padding: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        form {
+            background: #ffffff; /* White background for the form */
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #007bff; /* Blue border */
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background: #007bff; /* Blue background */
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background: #0056b3; /* Darker blue on hover */
+        }
+    </style>
 </head>
 <body>
     <h2>Edit User</h2>
