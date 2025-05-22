@@ -12,9 +12,10 @@ if(isset($_POST['tambah'])){
     $jumlah_halaman = $_POST['jumlah_halaman'];
     $harga = $_POST['harga'];
     $gambar_buku = $_POST['gambar_buku'];
+    $stok = $_POST['stok'];
 
-    $sql = "INSERT INTO buku(kode_buku, no_buku, judul_buku, tahun_terbit, penulis, penerbit, jumlah_halaman, harga, gambar_buku)
-            VALUES('$kode_buku','$no_buku','$judul_buku','$tahun_terbit','$penulis','$penerbit','$jumlah_halaman','$harga','$gambar_buku')";
+    $sql = "INSERT INTO buku(kode_buku, no_buku, judul_buku, tahun_terbit, penulis, penerbit, jumlah_halaman, harga, gambar_buku, stok)
+            VALUES('$kode_buku','$no_buku','$judul_buku','$tahun_terbit','$penulis','$penerbit','$jumlah_halaman','$harga','$gambar_buku','$stok')";
     $mysqli_query = mysqli_query($koneksi, $sql);
 }
 ?>
@@ -97,6 +98,7 @@ if(isset($_POST['tambah'])){
         <input type="number" name="jumlah_halaman" placeholder="Jumlah Halaman" required><br>
         <input type="number" name="harga" placeholder="Harga" required><br>
         <input type="text" name="gambar_buku" placeholder="Gambar Buku" required><br>
+         <input type="number" name="stok" placeholder="stok" required><br>
         <input type="submit" name="tambah" value="Tambah">
     </form>
     <table>
@@ -109,6 +111,7 @@ if(isset($_POST['tambah'])){
             <th>PENERBIT</th>
             <th>JUMLAH HALAMAN</th>
             <th>HARGA</th>
+            <th>STOK</th>
             <th>GAMBAR</th>
             <th>AKSI</th>
         </tr>
@@ -125,6 +128,7 @@ if(isset($_POST['tambah'])){
                 <td><?=$data['penerbit'];?></td>
                 <td><?=$data['jumlah_halaman'];?></td>
                 <td><?=$data['harga'];?></td>
+                <td><?=$data['stok'];?></td>
                 <td><img src="<?=$data['gambar_buku'];?>" alt="cover"></td>
                 <td>
                     <a href="edit.php?no_buku=<?=$data['no_buku'];?>">EDIT</a>

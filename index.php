@@ -54,6 +54,7 @@ include('koneksi.php');
                 <th>PENERBIT</th>
                 <th>JUMLAH HALAMAN</th>
                 <th>HARGA</th>
+                 <th>STOK</th>
                 <th>GAMBAR BUKU</th>
             </tr>
         </thead>
@@ -78,6 +79,7 @@ include('koneksi.php');
                 <td><?= htmlspecialchars($data['penerbit']); ?></td>
                 <td><?= htmlspecialchars($data['jumlah_halaman']); ?></td>
                 <td><?= htmlspecialchars($data['harga']); ?></td>
+                <td><?= htmlspecialchars($data['stok']); ?></td>
                 <td>
                     <img src="<?= $gambar; ?>" alt="Cover Buku" />
                 </td>
