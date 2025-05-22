@@ -18,12 +18,12 @@ if (isset($_POST['login'])) {
         } else if ($data['role'] == 'admin') {
             header('Location: admin.php');
             exit();
-        } else {
+        } else if ($data['role'] == 'superadmin'){
             header('Location: superadmin.php');
             exit();
+        } else {
+            echo "<script type='text/javascript'>alert('Login Gagal!');</script>";
         }
-    } else {
-        echo 'LOGIN GAGAL';
     }
 }
 ?>

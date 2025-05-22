@@ -5,7 +5,8 @@ $user = "root";
 $password = "";
 $database = "parstella";
 
-$conn = mysqli_connect($host, $user, $pass, $db);
+$conn = mysqli_connect($host, $user, $password, $database); // Corrected $db to $database
+
 
 // Cek koneksi
 if ($conn->connect_error) {
